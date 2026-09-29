@@ -1135,7 +1135,7 @@ def _rec_status() -> list:
             pass
     goal = _auto.get("goal") or _last_goal.get("goal")
     lines = [
-        "Pokemon Red HRL Agent",
+        "Pokemon-Playing Agent",
         f"사이클 {int(_auto.get('cycle') or 0)} · 스텝 {int(_auto.get('steps') or 0)}",
         f"# 단계  {phase}",
         f"현재 맵  {here}",
