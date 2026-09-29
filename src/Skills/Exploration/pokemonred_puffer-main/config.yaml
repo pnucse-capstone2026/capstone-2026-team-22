@@ -1,0 +1,33 @@
+# 이 트리는 **실행 전용**이다. 학습 CLI(train.py)와 그 모듈
+# (rewards/ wrappers/ environment.py ...)은 여기 없으므로 학습용 섹션
+# (wandb / train / profiles / wrappers / rewards / policies / debug)도 두지
+# 않는다. 필요해지면 원본 pokemonred_puffer 저장소에서 다시 가져올 것.
+#
+# 실제로 읽히는 것은 아래 env.* 뿐이며, 읽는 곳은 두 군데다:
+#   play_bridge.PlayExplorationPolicy  — action_freq / max_steps /
+#                                        reduce_res / two_bit
+#   play_env_parity.TrainCheatBridge   — 위 + disable_wild_encounters /
+#                                        auto_win_trainer_battles /
+#                                        disable_ai_actions
+#
+# 주의: play 실행에서 겹치는 값(max_steps / device / greedy / 치트 프로필 /
+#       모델 파일)의 정본은 프로젝트 루트의 settings/config.yaml 의
+#       exploration.* 이며 그쪽이 이 값을 덮어쓴다.
+#       action_freq 는 학습 파리티 값이라 여기가 정본이다.
+env:
+  # 1 액션당 진행 프레임. 학습 때와 같아야 정책이 제대로 동작한다.
+  action_freq: 24
+  # 에피소드 길이. settings/config.yaml 의 exploration.max_steps 가 우선한다.
+  max_steps: 900
+
+  # --- 화면 관측 형식 (학습 파리티) ---
+  reduce_res: True
+  two_bit: True
+
+  # --- 전투 스킵 ---
+  # 야생 조우 끔. cheat_profile 이 off 면 무시된다.
+  disable_wild_encounters: True
+  # 맵 트레이너 전투를 싸우지 않고 승리 처리. cheat_profile full 에서만.
+  auto_win_trainer_battles: True
+  # True 면 학습 env 가 게임의 AI 행동을 막는다 (play 에서는 쓰지 않는다).
+  disable_ai_actions: False

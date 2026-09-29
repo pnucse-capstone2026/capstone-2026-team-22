@@ -1,0 +1,207 @@
+# maze RL 실행 설정 — 이 파일이 설정의 정본이다.
+
+emulation_speed: 0
+
+# PyBoy 생성자에 그대로 넘어가는 값들 (pyboy 2.7). engine/session.py 가 읽는다.
+pyboy:
+  # 창 방식. "SDL2" | "OpenGL" | "GLFW" | "null"
+  window: "SDL2"
+  scale: 3
+  # 사운드 에뮬레이션 자체를 끈다(음소거가 아니라 미실행). 헤드리스·고속에서 유리.
+  sound_emulated: false
+  # 0-100. sound_emulated: false 면 의미 없다.
+  sound_volume: 0
+  # true 면 사람이 키보드로 조작할 수 없다. 무인 실행에서만 켤 것.
+  no_input: false
+  # "CRITICAL" | "ERROR" | "WARNING" | "INFO" | "DEBUG"
+  log_level: "WARNING"
+  # .sym 파일 경로(프로젝트 루트 기준).
+  symbols: ""
+  # 창 제목에 FPS 등 성능 표시
+  title_status: false
+
+cheats:
+  # 풀/물 야생 조우 비활성 (매 프레임 wGrassRate/wWaterRate=0)
+  disable_wild_encounters: false
+  # 전투를 그냥 이긴 것으로 처리한다 (야생·트레이너 모두).
+  auto_win_battle: true
+  # 시작 시 noclip 기본값 (런타임에서 noclip on|off 로 변경 가능) 주의: noclip 은 나무를 "그냥 지나가게" 하는 디버깅용이지 풀베기가 아니다.
+  noclip: false
+  # 비전머신 자동 사용.
+  hm_cut: story
+  hm_surf: badge
+  # 비전머신 운반용 포켓몬.
+  hm_carrier:
+    enabled: true
+    species: tentacool
+    level: 20
+    nickname: HMMON
+  # 달맞이산 B2F 화석 오브젝트 숨김 (Yes/No 이벤트 스킵). 이벤트 플래그는 안 켬
+  skip_mt_moon_fossils: true
+  # 갈색시티(Vermilion) 체육관 쓰레기통 스위치 퍼즐을 건너뛴다.
+  skip_vermilion_gym_puzzle: true
+  # 빌의 집(블루시티 북쪽 25번도로 끝) 이벤트를 대신 마무리한다.
+  skip_bill_cell_separator: true
+  # 12·16번도로에서 길을 막고 자는 잠만보를 깨운다 (포켓몬 피리가 가방에 있을 때만).
+  wake_snorlax: true
+  # true  : 게임의 피리와 같다 — 잠만보 **바로 옆 칸**에 서 있을 때만 깨운다 (플래너가 ROUTE12_SNORLAX / ROUTE16_SNORLAX 를 목표 NPC 로…
+  wake_snorlax_adjacent_only: true
+  # 잠만보를 보이는 순간 이름(ROUTE12_SNORLAX)을 붙여 NPC 목록·목표 NPC 후보에 올린다.
+  snorlax_as_npc: true
+  # 노랑시티 게이트 경비원에게 줄 음료.
+  buy_saffron_drink: true
+  # 무지개시티 게임코너: 포스터 앞 로켓단원을 **이기면** 포스터 뒤 스위치까지 대신 누른다.
+  skip_game_corner_poster: true
+  # 포켓몬 타워 6층 유령 마로왁은 실프스코프가 없으면 auto_win_battle 로도 이기지 않는다 (게임에서도 못 이긴다 — 이기면 스토리를 건너뛴다).
+  ghost_marowak_needs_scope: true
+  # 유령전(실프스코프 없음)은 기술이 안 통해 PPO 가 못 싸운다 → 전투 메뉴의 RUN 으로 도망.
+  ghost_flee: true
+  # 길을 막은 오브젝트(몬스터볼 등)는 A* 가 막혔을 때 그 앞에 서서 A 로 상호작용한다.
+  blocking_object_interact: true
+  # 앞에서 눌러도 안 비키는 오브젝트(잠만보·바위)는 NPC 처럼 이름을 붙여 남긴다 → current_npc.json · LLM NPC 목록에 나오고 목표 NPC 로 찾아갈 수…
+  blocking_object_record: true
+  # 실프주식회사 카드키 문.
+  card_key_doors: true
+  # 자전거 상품권이 가방에 있으면 자전거 가게 점원(BIKESHOP_CLERK)에게 말을 걸 수 있다 (다른 상점 점원은 구매 메뉴가 열려서 계속 금지).
+  bike_clerk_with_voucher: true
+  # 세션 시작 시 파티에 사기 몬 추가 (파티 가득/이미 있으면 스킵) 주의: 레벨100 뮤츠가 있으면 모든 전투가 1턴에 끝나 Battle PPO 평가가 무의미해진다.
+  party_mon:
+    enabled: false
+    species: mewtwo   # mewtwo | mew
+    level: 100
+    nickname: MEWTWO
+    skip_if_have: false
+
+events:
+  # wEventFlags 폴링 주기 (프레임)
+  poll_every_frames: 60
+  # play 시작 시 세이브에 이미 ON인 플래그를 current_events.json에 시드
+  seed_already_set: true
+  # 게임에 이벤트 플래그가 **없는** 핵심 아이템(실프스코프·리프트 키·카드 키·금이빨·비밀 열쇠)을 가방에서 보고 "Got Silph Scope" 같은 이벤트로 만든다.
+  key_item_events: true
+  # wEventFlags 밖의 스토리 비트를 이벤트로 본다 — 지금은 "Gave Saffron Guards Drink" 하나 (노랑시티 게이트 경비원에게 음료를 줬다…
+  status_flag_events: true
+
+exploration:
+  # 어느 Exploration 폴더와 모델을 쓸지.
+  skill: "bfs"
+  # auto 루프가 탐험을 coverage / seekwarp 둘로 나눠 부를지.
+  auto_split: false
+  # explore 한 번의 액션 수.
+  max_steps: 900
+  # 콘솔에서 `explore` 를 직접 칠 때만 쓰는 상한.
+  max_steps_manual: 0
+  # skill: 1 의 정책(.pt).
+  model: "Skills/Exploration/model_000055.pt"
+  # skill: 2 의 정책(.pt).
+  model2: "Skills/Exploration2/model_000114.pt"
+  # skill: coverage 의 정책(.zip, Stable-Baselines3).
+  model_coverage: ""
+  # seekwarp 는 규칙 기반이라 모델이 없다. RL 로 바꾸면 여기에 적는다.
+  model_seekwarp: ""
+  # SeekWarp 한 번의 액션 상한 (워프 하나까지 가는 데 충분한 값)
+  seekwarp_max_steps: 300
+  # skill: bfs — 학습 정책 대신 규칙으로 "탐험이 최대로 될 때"를 만든다 (LLM 시험용).
+  bfs_cross_warps: true
+  bfs_travel: true
+  # 탐험의 범위 — **둘은 '탐험' 의 뜻이 다르다.** false : (지금까지의 BFS) 출구를 넘어가면 그 맵도 이어서 넓히고, 일이 남은 다른 맵으로도 간다.
+  bfs_home_map_only: true
+  # bfs_home_map_only: true 의 **예외 타일셋** — 여기서 **시작한** 탐험은 시작한 맵에 묶지 않는다.
+  bfs_free_roam_tilesets: [17]
+  bfs_fail_limit: 2
+  # bfs_travel 로 옮겨 갈 맵의 거리 상한 (GlobalMap 홉).
+  bfs_travel_max_hops: 2
+  # 정책 추론 장치. cpu | cuda
+  device: cpu
+  # True 면 항상 최고 확률 액션 (탐험성이 줄어든다)
+  greedy: false
+  # explore 중 적용할 학습 env 치트 — 정책이 학습된 조건과 맞춰야 한다.
+  cheat_profile: "off"
+
+  # 조건은 넷이다: ① 서 있는 곳에서 도달 가능한 영역이 **폐영역**일 것(경계가 벽/물/나무/워프/맵 경계뿐) ② 출구를 하나는 찾았을 것(close_min_warps) ③ 갈…
+  close_portals: true
+  # 닫힌 맵에서는 다음부터 Exploration 을 부르지 않는다.
+  close_on_map_closed: true
+  # 탐험 도중 시작한 맵이 최종 종료 조건에 닿으면 max_steps 를 다 쓰기 전에 에피소드를 끊는다.
+  close_stop_explore: true
+  close_check_every: 25
+  # 폐영역이어도 찾은 출구(밟아 확정 + 화면으로 관측)가 이 개수 미만이면 끝내지 않는다.
+  close_min_warps: 1
+  # 찾은 문(도로 connection + 집·상점 문)을 **전부 들어가 봤어야** 끝난 것으로 본다.
+  close_require_all_warps: true
+  # 포탈 재귀 깊이(홉) 상한. 달맞이산 1F → B1F → B2F → B1F → 1F 가 4홉이다. 넘으면 "재귀 한도 초과" = 미완료.
+  close_max_depth: 4
+  # 이 조각이 warps.json const 에 들어간 맵(ROUTE_4 · ROUTE_2_GATE)은 **안쪽 포탈을 따라가지 않는다**.
+  close_no_recurse_marks: ["route"]
+  # 판정에서 제외할 타일셋.
+  close_skip_tilesets: []
+  # NPC/오브젝트가 서 있는 칸을 막힘으로 볼지.
+  close_npc_blocks: false
+  # 맵 사각형 밖의 **미관측** 칸도 미관측 경계로 센다.
+  close_offmap_frontier: true
+  # 판정 결과(도달 칸 수 / 미관측 경계 / 찾은 워프)를 매번 출력
+  close_debug: false
+
+battle:
+  # true면 야생/트레이너 배틀을 감지해 Battle PPO가 자동으로 처리한다.
+  enabled: true
+  # 프로젝트 루트 기준 경로. Exploration 모델처럼 여기서 교체한다.
+  model: "Skills/Battle/models/model.zip"
+  sym: "assets/roms/pokered.sym"
+  device: cpu
+  deterministic: true
+  max_turns: 2000
+  prepare_timeout_frames: 2400
+  # 자동 배틀이 실패했을 때.
+  on_failure: amash
+  # 레벨업으로 5번째 기술을 배울 때 어느 기술을 지울지.
+  on_move_learn: oldest
+  # Battle Skill 내부 로그(턴마다 나오는 action 등)를 터미널에 보일지.
+  pp_stuck_limit: 10
+  debug: false
+  macro_debug: false
+
+auto:
+  # auto 명령의 plan→nav→explore 반복 횟수 상한 (넘으면 자동 중단)
+  max_cycles: 500
+  # auto 한 번 동안 Nav/Local Nav/Exploration이 완료한 액션 수의 합계 상한.
+  max_steps: 0
+  # 다음 단계(Planning 등)로 넘어가기 전에 게임이 **이만큼 연속으로 가라앉아 있어야** 한다 (프레임).
+  settle_frames: 60
+
+# play.py 에서 `rec on` 을 친 순간부터 `rec off`(또는 종료)까지 게임 화면을 mp4 한 편으로 남긴다.
+recording:
+  # true 면 play.py 를 켜자마자 녹화를 시작한다 (rec on 을 친 것과 같다). false 면 rec on 을 칠 때만.
+  start_on_launch: false
+  # 배속.
+  speed: 8
+  # 영상 재생 fps (게임은 60fps). 30 이면 장 수가 절반이라 파일도 대략 절반이다 (배속은 그대로).
+  fps: 60
+  # 게임 화면 확대 배율 (160x144 → 480x432)
+  scale: 3
+  # 오른쪽 패널 — 사이클 · 단계 · 현재 맵 · 목표 맵/NPC · 스킬 · 할 일 · 배지 · 최근 이벤트 · 배속/게임 시간
+  overlay: true
+  # 새 계획이 나오면 그 화면을 이만큼(초) 멈춰 보여 준다. 긴 플레이를 고배속으로 담을 때는 0~0.5 권장.
+  plan_hold_sec: 1.0
+  # 영상이 저장될 폴더 (파일명: auto_날짜_시각_x배속.mp4)
+  out_dir: recordings
+  # 패널 한글 글꼴(.ttf/.ttc). 비우면 맑은 고딕·나눔고딕 등을 찾아 쓴다.
+  font: ""
+
+planner:
+  # 다음 목표 맵을 정할 LLM 백엔드 claude : Claude Code CLI(claude -p) 호출 — 로그인된 구독 사용, API 키 불필요 gemini : Google…
+  backend: claude
+  # 프롬프트에 `## 막힌 칸` (맵별 좌표 — NPC 가 길을 막은 곳, current_blocked*.json 과 같은 내용) 을 넣는다.
+  blocked_cells: true
+  # `Gave Saffron Guards Drink` 가 이벤트에 있으면 노랑시티 게이트 경비원(ROUTE5~8GATE_GUARD)을 목표 NPC 에서 뺀다.
+  open_gates_after_drink: true
+  # `## 최근 계획과 결과` 에서 실패한 계획 밑에 **실패 사유 한 줄**(사유: …)을 붙인다.
+  history_fail_reason: true
+  # (예전 2단계 검증 verify / stage1_maps 는 없앴다 — Planning 한 번이 전부다.
+  claude_cli: claude
+  # 모델 별칭(opus/sonnet/haiku) 또는 전체 이름.
+  claude_model: "sonnet"
+  # 추론 노력 수준.
+  claude_effort: "low"
+  # plan 한 번의 제한 시간(초)
+  timeout_sec: 120

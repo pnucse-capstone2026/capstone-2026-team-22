@@ -1,0 +1,9 @@
+# 줄바꿈은 저장소에 LF 로, 체크아웃은 OS 기본으로
+* text=auto
+
+# 바이너리로 취급
+*.pt    binary
+*.gb    binary
+*.state binary
+*.png   binary
+*.sym   binary

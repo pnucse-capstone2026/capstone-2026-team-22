@@ -1,0 +1,56 @@
+# ── 저작권: 절대 올리지 말 것 ───────────────────────────────
+assets/roms/
+assets/states/
+play_state/
+*.gb
+*.gbc
+*.sav
+*.state
+
+# ── 비밀키 ────────────────────────────────────────────────
+settings/.env
+!settings/.env.example
+
+# ── 파이썬 ────────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ── 실행 중 생성물 ─────────────────────────────────────────
+runtime/
+backup/
+
+# ── 학습 산출물 (이 폴더 밖에서 학습해 가져오는 것) ──────────
+# 필요하면 Git LFS 로 따로 관리
+*.pt
+*.pth
+*.ckpt
+
+# ── 외부 레포 사본 (data/*.json 재생성용, 실행에는 불필요) ──
+# 포함하려면 이 줄을 지우거나 submodule 로 바꿀 것
+third_party/
+
+# ── 에디터 / OS ───────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Train.pack 산출물 (다른 서버로 옮기는 번들)
+dist/
+Train/battle/runs/
+Train/battle/assets/
+Train/explore/runs/
+Train/explore/assets/
+
+# 시연 영상 (recording.out_dir)
+recordings/
+
+# 배포본에 넣은 탐험 PPO 모델 (scripts/make_release.py)
+!Skills/Exploration/model_000055.pt
+!Skills/Exploration2/model_000114.pt
+!Skills/Exploration2/model_000065.pt

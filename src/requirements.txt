@@ -1,0 +1,36 @@
+# 프로젝트 루트에서: pip install -r requirements.txt
+# Python version은 3.11.15로 실행
+
+# 공통 (play / map)
+pyboy==2.7.0
+numpy==1.23.3
+gymnasium==0.29.1
+networkx==3.4.2
+torch==2.12.1
+Pillow==11.3.0
+pufferlib @ git+https://github.com/thatguy11325/PufferLib.git@47ebd5e4ed49c7d735e3db56a7710802e67cf961
+omegaconf==2.3.0
+pyyaml==6.0.3
+
+
+## LLM
+google-genai==2.17.0
+python-dotenv==1.2.2
+
+## 시연 영상 녹화 (play.py 의 rec on|off — engine/recorder.py)
+opencv-python==3.4.17.63
+
+## Battle inference
+stable-baselines3==2.9.0
+
+## Dev (린트 — python -m ruff check .  · 설정은 ruff.toml)
+ruff==0.16.8
+
+## Learning pip
+# psutil==7.2.2
+# Cython==3.2.4
+# mediapy==1.2.6
+# rich==14.3.3
+# tqdm==4.68.3
+# typer==0.24.1
+# wandb==0.25.1

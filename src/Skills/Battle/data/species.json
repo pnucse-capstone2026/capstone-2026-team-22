@@ -1,0 +1,1512 @@
+{
+  "1": {
+    "name": "RHYDON",
+    "type1": "GROUND",
+    "type2": "ROCK",
+    "hp": 105,
+    "attack": 130,
+    "defense": 120,
+    "speed": 40,
+    "special": 45
+  },
+  "2": {
+    "name": "KANGASKHAN",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 105,
+    "attack": 95,
+    "defense": 80,
+    "speed": 90,
+    "special": 40
+  },
+  "3": {
+    "name": "NIDORAN_M",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 46,
+    "attack": 57,
+    "defense": 40,
+    "speed": 50,
+    "special": 40
+  },
+  "4": {
+    "name": "CLEFAIRY",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 70,
+    "attack": 45,
+    "defense": 48,
+    "speed": 35,
+    "special": 60
+  },
+  "5": {
+    "name": "SPEAROW",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 40,
+    "attack": 60,
+    "defense": 30,
+    "speed": 70,
+    "special": 31
+  },
+  "6": {
+    "name": "VOLTORB",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 40,
+    "attack": 30,
+    "defense": 50,
+    "speed": 100,
+    "special": 55
+  },
+  "7": {
+    "name": "NIDOKING",
+    "type1": "POISON",
+    "type2": "GROUND",
+    "hp": 81,
+    "attack": 92,
+    "defense": 77,
+    "speed": 85,
+    "special": 75
+  },
+  "8": {
+    "name": "SLOWBRO",
+    "type1": "WATER",
+    "type2": "PSYCHIC",
+    "hp": 95,
+    "attack": 75,
+    "defense": 110,
+    "speed": 30,
+    "special": 80
+  },
+  "9": {
+    "name": "IVYSAUR",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 60,
+    "attack": 62,
+    "defense": 63,
+    "speed": 60,
+    "special": 80
+  },
+  "10": {
+    "name": "EXEGGUTOR",
+    "type1": "GRASS",
+    "type2": "PSYCHIC",
+    "hp": 95,
+    "attack": 95,
+    "defense": 85,
+    "speed": 55,
+    "special": 125
+  },
+  "11": {
+    "name": "LICKITUNG",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 90,
+    "attack": 55,
+    "defense": 75,
+    "speed": 30,
+    "special": 60
+  },
+  "12": {
+    "name": "EXEGGCUTE",
+    "type1": "GRASS",
+    "type2": "PSYCHIC",
+    "hp": 60,
+    "attack": 40,
+    "defense": 80,
+    "speed": 40,
+    "special": 60
+  },
+  "13": {
+    "name": "GRIMER",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 80,
+    "attack": 80,
+    "defense": 50,
+    "speed": 25,
+    "special": 40
+  },
+  "14": {
+    "name": "GENGAR",
+    "type1": "GHOST",
+    "type2": "POISON",
+    "hp": 60,
+    "attack": 65,
+    "defense": 60,
+    "speed": 110,
+    "special": 130
+  },
+  "15": {
+    "name": "NIDORAN_F",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 55,
+    "attack": 47,
+    "defense": 52,
+    "speed": 41,
+    "special": 40
+  },
+  "16": {
+    "name": "NIDOQUEEN",
+    "type1": "POISON",
+    "type2": "GROUND",
+    "hp": 90,
+    "attack": 82,
+    "defense": 87,
+    "speed": 76,
+    "special": 75
+  },
+  "17": {
+    "name": "CUBONE",
+    "type1": "GROUND",
+    "type2": null,
+    "hp": 50,
+    "attack": 50,
+    "defense": 95,
+    "speed": 35,
+    "special": 40
+  },
+  "18": {
+    "name": "RHYHORN",
+    "type1": "GROUND",
+    "type2": "ROCK",
+    "hp": 80,
+    "attack": 85,
+    "defense": 95,
+    "speed": 25,
+    "special": 30
+  },
+  "19": {
+    "name": "LAPRAS",
+    "type1": "WATER",
+    "type2": "ICE",
+    "hp": 130,
+    "attack": 85,
+    "defense": 80,
+    "speed": 60,
+    "special": 95
+  },
+  "20": {
+    "name": "ARCANINE",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 90,
+    "attack": 110,
+    "defense": 80,
+    "speed": 95,
+    "special": 80
+  },
+  "21": {
+    "name": "MEW",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 100,
+    "attack": 100,
+    "defense": 100,
+    "speed": 100,
+    "special": 100
+  },
+  "22": {
+    "name": "GYARADOS",
+    "type1": "WATER",
+    "type2": "FLYING",
+    "hp": 95,
+    "attack": 125,
+    "defense": 79,
+    "speed": 81,
+    "special": 100
+  },
+  "23": {
+    "name": "SHELLDER",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 30,
+    "attack": 65,
+    "defense": 100,
+    "speed": 40,
+    "special": 45
+  },
+  "24": {
+    "name": "TENTACOOL",
+    "type1": "WATER",
+    "type2": "POISON",
+    "hp": 40,
+    "attack": 40,
+    "defense": 35,
+    "speed": 70,
+    "special": 100
+  },
+  "25": {
+    "name": "GASTLY",
+    "type1": "GHOST",
+    "type2": "POISON",
+    "hp": 30,
+    "attack": 35,
+    "defense": 30,
+    "speed": 80,
+    "special": 100
+  },
+  "26": {
+    "name": "SCYTHER",
+    "type1": "BUG",
+    "type2": "FLYING",
+    "hp": 70,
+    "attack": 110,
+    "defense": 80,
+    "speed": 105,
+    "special": 55
+  },
+  "27": {
+    "name": "STARYU",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 30,
+    "attack": 45,
+    "defense": 55,
+    "speed": 85,
+    "special": 70
+  },
+  "28": {
+    "name": "BLASTOISE",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 79,
+    "attack": 83,
+    "defense": 100,
+    "speed": 78,
+    "special": 85
+  },
+  "29": {
+    "name": "PINSIR",
+    "type1": "BUG",
+    "type2": null,
+    "hp": 65,
+    "attack": 125,
+    "defense": 100,
+    "speed": 85,
+    "special": 55
+  },
+  "30": {
+    "name": "TANGELA",
+    "type1": "GRASS",
+    "type2": null,
+    "hp": 65,
+    "attack": 55,
+    "defense": 115,
+    "speed": 60,
+    "special": 100
+  },
+  "33": {
+    "name": "GROWLITHE",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 55,
+    "attack": 70,
+    "defense": 45,
+    "speed": 60,
+    "special": 50
+  },
+  "34": {
+    "name": "ONIX",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "hp": 35,
+    "attack": 45,
+    "defense": 160,
+    "speed": 70,
+    "special": 30
+  },
+  "35": {
+    "name": "FEAROW",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 65,
+    "attack": 90,
+    "defense": 65,
+    "speed": 100,
+    "special": 61
+  },
+  "36": {
+    "name": "PIDGEY",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 40,
+    "attack": 45,
+    "defense": 40,
+    "speed": 56,
+    "special": 35
+  },
+  "37": {
+    "name": "SLOWPOKE",
+    "type1": "WATER",
+    "type2": "PSYCHIC",
+    "hp": 90,
+    "attack": 65,
+    "defense": 65,
+    "speed": 15,
+    "special": 40
+  },
+  "38": {
+    "name": "KADABRA",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 40,
+    "attack": 35,
+    "defense": 30,
+    "speed": 105,
+    "special": 120
+  },
+  "39": {
+    "name": "GRAVELER",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "hp": 55,
+    "attack": 95,
+    "defense": 115,
+    "speed": 35,
+    "special": 45
+  },
+  "40": {
+    "name": "CHANSEY",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 250,
+    "attack": 5,
+    "defense": 5,
+    "speed": 50,
+    "special": 105
+  },
+  "41": {
+    "name": "MACHOKE",
+    "type1": "FIGHTING",
+    "type2": null,
+    "hp": 80,
+    "attack": 100,
+    "defense": 70,
+    "speed": 45,
+    "special": 50
+  },
+  "42": {
+    "name": "MR_MIME",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 40,
+    "attack": 45,
+    "defense": 65,
+    "speed": 90,
+    "special": 100
+  },
+  "43": {
+    "name": "HITMONLEE",
+    "type1": "FIGHTING",
+    "type2": null,
+    "hp": 50,
+    "attack": 120,
+    "defense": 53,
+    "speed": 87,
+    "special": 35
+  },
+  "44": {
+    "name": "HITMONCHAN",
+    "type1": "FIGHTING",
+    "type2": null,
+    "hp": 50,
+    "attack": 105,
+    "defense": 79,
+    "speed": 76,
+    "special": 35
+  },
+  "45": {
+    "name": "ARBOK",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 60,
+    "attack": 85,
+    "defense": 69,
+    "speed": 80,
+    "special": 65
+  },
+  "46": {
+    "name": "PARASECT",
+    "type1": "BUG",
+    "type2": "GRASS",
+    "hp": 60,
+    "attack": 95,
+    "defense": 80,
+    "speed": 30,
+    "special": 80
+  },
+  "47": {
+    "name": "PSYDUCK",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 50,
+    "attack": 52,
+    "defense": 48,
+    "speed": 55,
+    "special": 50
+  },
+  "48": {
+    "name": "DROWZEE",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 60,
+    "attack": 48,
+    "defense": 45,
+    "speed": 42,
+    "special": 90
+  },
+  "49": {
+    "name": "GOLEM",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "hp": 80,
+    "attack": 110,
+    "defense": 130,
+    "speed": 45,
+    "special": 55
+  },
+  "51": {
+    "name": "MAGMAR",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 65,
+    "attack": 95,
+    "defense": 57,
+    "speed": 93,
+    "special": 85
+  },
+  "53": {
+    "name": "ELECTABUZZ",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 65,
+    "attack": 83,
+    "defense": 57,
+    "speed": 105,
+    "special": 85
+  },
+  "54": {
+    "name": "MAGNETON",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 50,
+    "attack": 60,
+    "defense": 95,
+    "speed": 70,
+    "special": 120
+  },
+  "55": {
+    "name": "KOFFING",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 40,
+    "attack": 65,
+    "defense": 95,
+    "speed": 35,
+    "special": 60
+  },
+  "57": {
+    "name": "MANKEY",
+    "type1": "FIGHTING",
+    "type2": null,
+    "hp": 40,
+    "attack": 80,
+    "defense": 35,
+    "speed": 70,
+    "special": 35
+  },
+  "58": {
+    "name": "SEEL",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 65,
+    "attack": 45,
+    "defense": 55,
+    "speed": 45,
+    "special": 70
+  },
+  "59": {
+    "name": "DIGLETT",
+    "type1": "GROUND",
+    "type2": null,
+    "hp": 10,
+    "attack": 55,
+    "defense": 25,
+    "speed": 95,
+    "special": 45
+  },
+  "60": {
+    "name": "TAUROS",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 75,
+    "attack": 100,
+    "defense": 95,
+    "speed": 110,
+    "special": 70
+  },
+  "64": {
+    "name": "FARFETCHD",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 52,
+    "attack": 65,
+    "defense": 55,
+    "speed": 60,
+    "special": 58
+  },
+  "65": {
+    "name": "VENONAT",
+    "type1": "BUG",
+    "type2": "POISON",
+    "hp": 60,
+    "attack": 55,
+    "defense": 50,
+    "speed": 45,
+    "special": 40
+  },
+  "66": {
+    "name": "DRAGONITE",
+    "type1": "DRAGON",
+    "type2": "FLYING",
+    "hp": 91,
+    "attack": 134,
+    "defense": 95,
+    "speed": 80,
+    "special": 100
+  },
+  "70": {
+    "name": "DODUO",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 35,
+    "attack": 85,
+    "defense": 45,
+    "speed": 75,
+    "special": 35
+  },
+  "71": {
+    "name": "POLIWAG",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 40,
+    "attack": 50,
+    "defense": 40,
+    "speed": 90,
+    "special": 40
+  },
+  "72": {
+    "name": "JYNX",
+    "type1": "ICE",
+    "type2": "PSYCHIC",
+    "hp": 65,
+    "attack": 50,
+    "defense": 35,
+    "speed": 95,
+    "special": 95
+  },
+  "73": {
+    "name": "MOLTRES",
+    "type1": "FIRE",
+    "type2": "FLYING",
+    "hp": 90,
+    "attack": 100,
+    "defense": 90,
+    "speed": 90,
+    "special": 125
+  },
+  "74": {
+    "name": "ARTICUNO",
+    "type1": "ICE",
+    "type2": "FLYING",
+    "hp": 90,
+    "attack": 85,
+    "defense": 100,
+    "speed": 85,
+    "special": 125
+  },
+  "75": {
+    "name": "ZAPDOS",
+    "type1": "ELECTRIC",
+    "type2": "FLYING",
+    "hp": 90,
+    "attack": 90,
+    "defense": 85,
+    "speed": 100,
+    "special": 125
+  },
+  "76": {
+    "name": "DITTO",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 48,
+    "attack": 48,
+    "defense": 48,
+    "speed": 48,
+    "special": 48
+  },
+  "77": {
+    "name": "MEOWTH",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 40,
+    "attack": 45,
+    "defense": 35,
+    "speed": 90,
+    "special": 40
+  },
+  "78": {
+    "name": "KRABBY",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 30,
+    "attack": 105,
+    "defense": 90,
+    "speed": 50,
+    "special": 25
+  },
+  "82": {
+    "name": "VULPIX",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 38,
+    "attack": 41,
+    "defense": 40,
+    "speed": 65,
+    "special": 65
+  },
+  "83": {
+    "name": "NINETALES",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 73,
+    "attack": 76,
+    "defense": 75,
+    "speed": 100,
+    "special": 100
+  },
+  "84": {
+    "name": "PIKACHU",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 35,
+    "attack": 55,
+    "defense": 30,
+    "speed": 90,
+    "special": 50
+  },
+  "85": {
+    "name": "RAICHU",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 60,
+    "attack": 90,
+    "defense": 55,
+    "speed": 100,
+    "special": 90
+  },
+  "88": {
+    "name": "DRATINI",
+    "type1": "DRAGON",
+    "type2": null,
+    "hp": 41,
+    "attack": 64,
+    "defense": 45,
+    "speed": 50,
+    "special": 50
+  },
+  "89": {
+    "name": "DRAGONAIR",
+    "type1": "DRAGON",
+    "type2": null,
+    "hp": 61,
+    "attack": 84,
+    "defense": 65,
+    "speed": 70,
+    "special": 70
+  },
+  "90": {
+    "name": "KABUTO",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "hp": 30,
+    "attack": 80,
+    "defense": 90,
+    "speed": 55,
+    "special": 45
+  },
+  "91": {
+    "name": "KABUTOPS",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "hp": 60,
+    "attack": 115,
+    "defense": 105,
+    "speed": 80,
+    "special": 70
+  },
+  "92": {
+    "name": "HORSEA",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 30,
+    "attack": 40,
+    "defense": 70,
+    "speed": 60,
+    "special": 70
+  },
+  "93": {
+    "name": "SEADRA",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 55,
+    "attack": 65,
+    "defense": 95,
+    "speed": 85,
+    "special": 95
+  },
+  "96": {
+    "name": "SANDSHREW",
+    "type1": "GROUND",
+    "type2": null,
+    "hp": 50,
+    "attack": 75,
+    "defense": 85,
+    "speed": 40,
+    "special": 30
+  },
+  "97": {
+    "name": "SANDSLASH",
+    "type1": "GROUND",
+    "type2": null,
+    "hp": 75,
+    "attack": 100,
+    "defense": 110,
+    "speed": 65,
+    "special": 55
+  },
+  "98": {
+    "name": "OMANYTE",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "hp": 35,
+    "attack": 40,
+    "defense": 100,
+    "speed": 35,
+    "special": 90
+  },
+  "99": {
+    "name": "OMASTAR",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "hp": 70,
+    "attack": 60,
+    "defense": 125,
+    "speed": 55,
+    "special": 115
+  },
+  "100": {
+    "name": "JIGGLYPUFF",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 115,
+    "attack": 45,
+    "defense": 20,
+    "speed": 20,
+    "special": 25
+  },
+  "101": {
+    "name": "WIGGLYTUFF",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 140,
+    "attack": 70,
+    "defense": 45,
+    "speed": 45,
+    "special": 50
+  },
+  "102": {
+    "name": "EEVEE",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 55,
+    "attack": 55,
+    "defense": 50,
+    "speed": 55,
+    "special": 65
+  },
+  "103": {
+    "name": "FLAREON",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 65,
+    "attack": 130,
+    "defense": 60,
+    "speed": 65,
+    "special": 110
+  },
+  "104": {
+    "name": "JOLTEON",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 65,
+    "attack": 65,
+    "defense": 60,
+    "speed": 130,
+    "special": 110
+  },
+  "105": {
+    "name": "VAPOREON",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 130,
+    "attack": 65,
+    "defense": 60,
+    "speed": 65,
+    "special": 110
+  },
+  "106": {
+    "name": "MACHOP",
+    "type1": "FIGHTING",
+    "type2": null,
+    "hp": 70,
+    "attack": 80,
+    "defense": 50,
+    "speed": 35,
+    "special": 35
+  },
+  "107": {
+    "name": "ZUBAT",
+    "type1": "POISON",
+    "type2": "FLYING",
+    "hp": 40,
+    "attack": 45,
+    "defense": 35,
+    "speed": 55,
+    "special": 40
+  },
+  "108": {
+    "name": "EKANS",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 35,
+    "attack": 60,
+    "defense": 44,
+    "speed": 55,
+    "special": 40
+  },
+  "109": {
+    "name": "PARAS",
+    "type1": "BUG",
+    "type2": "GRASS",
+    "hp": 35,
+    "attack": 70,
+    "defense": 55,
+    "speed": 25,
+    "special": 55
+  },
+  "110": {
+    "name": "POLIWHIRL",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 65,
+    "attack": 65,
+    "defense": 65,
+    "speed": 90,
+    "special": 50
+  },
+  "111": {
+    "name": "POLIWRATH",
+    "type1": "WATER",
+    "type2": "FIGHTING",
+    "hp": 90,
+    "attack": 85,
+    "defense": 95,
+    "speed": 70,
+    "special": 70
+  },
+  "112": {
+    "name": "WEEDLE",
+    "type1": "BUG",
+    "type2": "POISON",
+    "hp": 40,
+    "attack": 35,
+    "defense": 30,
+    "speed": 50,
+    "special": 20
+  },
+  "113": {
+    "name": "KAKUNA",
+    "type1": "BUG",
+    "type2": "POISON",
+    "hp": 45,
+    "attack": 25,
+    "defense": 50,
+    "speed": 35,
+    "special": 25
+  },
+  "114": {
+    "name": "BEEDRILL",
+    "type1": "BUG",
+    "type2": "POISON",
+    "hp": 65,
+    "attack": 80,
+    "defense": 40,
+    "speed": 75,
+    "special": 45
+  },
+  "116": {
+    "name": "DODRIO",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 60,
+    "attack": 110,
+    "defense": 70,
+    "speed": 100,
+    "special": 60
+  },
+  "117": {
+    "name": "PRIMEAPE",
+    "type1": "FIGHTING",
+    "type2": null,
+    "hp": 65,
+    "attack": 105,
+    "defense": 60,
+    "speed": 95,
+    "special": 60
+  },
+  "118": {
+    "name": "DUGTRIO",
+    "type1": "GROUND",
+    "type2": null,
+    "hp": 35,
+    "attack": 80,
+    "defense": 50,
+    "speed": 120,
+    "special": 70
+  },
+  "119": {
+    "name": "VENOMOTH",
+    "type1": "BUG",
+    "type2": "POISON",
+    "hp": 70,
+    "attack": 65,
+    "defense": 60,
+    "speed": 90,
+    "special": 90
+  },
+  "120": {
+    "name": "DEWGONG",
+    "type1": "WATER",
+    "type2": "ICE",
+    "hp": 90,
+    "attack": 70,
+    "defense": 80,
+    "speed": 70,
+    "special": 95
+  },
+  "123": {
+    "name": "CATERPIE",
+    "type1": "BUG",
+    "type2": null,
+    "hp": 45,
+    "attack": 30,
+    "defense": 35,
+    "speed": 45,
+    "special": 20
+  },
+  "124": {
+    "name": "METAPOD",
+    "type1": "BUG",
+    "type2": null,
+    "hp": 50,
+    "attack": 20,
+    "defense": 55,
+    "speed": 30,
+    "special": 25
+  },
+  "125": {
+    "name": "BUTTERFREE",
+    "type1": "BUG",
+    "type2": "FLYING",
+    "hp": 60,
+    "attack": 45,
+    "defense": 50,
+    "speed": 70,
+    "special": 80
+  },
+  "126": {
+    "name": "MACHAMP",
+    "type1": "FIGHTING",
+    "type2": null,
+    "hp": 90,
+    "attack": 130,
+    "defense": 80,
+    "speed": 55,
+    "special": 65
+  },
+  "128": {
+    "name": "GOLDUCK",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 80,
+    "attack": 82,
+    "defense": 78,
+    "speed": 85,
+    "special": 80
+  },
+  "129": {
+    "name": "HYPNO",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 85,
+    "attack": 73,
+    "defense": 70,
+    "speed": 67,
+    "special": 115
+  },
+  "130": {
+    "name": "GOLBAT",
+    "type1": "POISON",
+    "type2": "FLYING",
+    "hp": 75,
+    "attack": 80,
+    "defense": 70,
+    "speed": 90,
+    "special": 75
+  },
+  "131": {
+    "name": "MEWTWO",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 106,
+    "attack": 110,
+    "defense": 90,
+    "speed": 130,
+    "special": 154
+  },
+  "132": {
+    "name": "SNORLAX",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 160,
+    "attack": 110,
+    "defense": 65,
+    "speed": 30,
+    "special": 65
+  },
+  "133": {
+    "name": "MAGIKARP",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 20,
+    "attack": 10,
+    "defense": 55,
+    "speed": 80,
+    "special": 20
+  },
+  "136": {
+    "name": "MUK",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 105,
+    "attack": 105,
+    "defense": 75,
+    "speed": 50,
+    "special": 65
+  },
+  "138": {
+    "name": "KINGLER",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 55,
+    "attack": 130,
+    "defense": 115,
+    "speed": 75,
+    "special": 50
+  },
+  "139": {
+    "name": "CLOYSTER",
+    "type1": "WATER",
+    "type2": "ICE",
+    "hp": 50,
+    "attack": 95,
+    "defense": 180,
+    "speed": 70,
+    "special": 85
+  },
+  "141": {
+    "name": "ELECTRODE",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 60,
+    "attack": 50,
+    "defense": 70,
+    "speed": 140,
+    "special": 80
+  },
+  "142": {
+    "name": "CLEFABLE",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 95,
+    "attack": 70,
+    "defense": 73,
+    "speed": 60,
+    "special": 85
+  },
+  "143": {
+    "name": "WEEZING",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 65,
+    "attack": 90,
+    "defense": 120,
+    "speed": 60,
+    "special": 85
+  },
+  "144": {
+    "name": "PERSIAN",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 65,
+    "attack": 70,
+    "defense": 60,
+    "speed": 115,
+    "special": 65
+  },
+  "145": {
+    "name": "MAROWAK",
+    "type1": "GROUND",
+    "type2": null,
+    "hp": 60,
+    "attack": 80,
+    "defense": 110,
+    "speed": 45,
+    "special": 50
+  },
+  "147": {
+    "name": "HAUNTER",
+    "type1": "GHOST",
+    "type2": "POISON",
+    "hp": 45,
+    "attack": 50,
+    "defense": 45,
+    "speed": 95,
+    "special": 115
+  },
+  "148": {
+    "name": "ABRA",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 25,
+    "attack": 20,
+    "defense": 15,
+    "speed": 90,
+    "special": 105
+  },
+  "149": {
+    "name": "ALAKAZAM",
+    "type1": "PSYCHIC",
+    "type2": null,
+    "hp": 55,
+    "attack": 50,
+    "defense": 45,
+    "speed": 120,
+    "special": 135
+  },
+  "150": {
+    "name": "PIDGEOTTO",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 63,
+    "attack": 60,
+    "defense": 55,
+    "speed": 71,
+    "special": 50
+  },
+  "151": {
+    "name": "PIDGEOT",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "hp": 83,
+    "attack": 80,
+    "defense": 75,
+    "speed": 91,
+    "special": 70
+  },
+  "152": {
+    "name": "STARMIE",
+    "type1": "WATER",
+    "type2": "PSYCHIC",
+    "hp": 60,
+    "attack": 75,
+    "defense": 85,
+    "speed": 115,
+    "special": 100
+  },
+  "153": {
+    "name": "BULBASAUR",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "speed": 45,
+    "special": 65
+  },
+  "154": {
+    "name": "VENUSAUR",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 80,
+    "attack": 82,
+    "defense": 83,
+    "speed": 80,
+    "special": 100
+  },
+  "155": {
+    "name": "TENTACRUEL",
+    "type1": "WATER",
+    "type2": "POISON",
+    "hp": 80,
+    "attack": 70,
+    "defense": 65,
+    "speed": 100,
+    "special": 120
+  },
+  "157": {
+    "name": "GOLDEEN",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 45,
+    "attack": 67,
+    "defense": 60,
+    "speed": 63,
+    "special": 50
+  },
+  "158": {
+    "name": "SEAKING",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 80,
+    "attack": 92,
+    "defense": 65,
+    "speed": 68,
+    "special": 80
+  },
+  "163": {
+    "name": "PONYTA",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 50,
+    "attack": 85,
+    "defense": 55,
+    "speed": 90,
+    "special": 65
+  },
+  "164": {
+    "name": "RAPIDASH",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 65,
+    "attack": 100,
+    "defense": 70,
+    "speed": 105,
+    "special": 80
+  },
+  "165": {
+    "name": "RATTATA",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 30,
+    "attack": 56,
+    "defense": 35,
+    "speed": 72,
+    "special": 25
+  },
+  "166": {
+    "name": "RATICATE",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 55,
+    "attack": 81,
+    "defense": 60,
+    "speed": 97,
+    "special": 50
+  },
+  "167": {
+    "name": "NIDORINO",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 61,
+    "attack": 72,
+    "defense": 57,
+    "speed": 65,
+    "special": 55
+  },
+  "168": {
+    "name": "NIDORINA",
+    "type1": "POISON",
+    "type2": null,
+    "hp": 70,
+    "attack": 62,
+    "defense": 67,
+    "speed": 56,
+    "special": 55
+  },
+  "169": {
+    "name": "GEODUDE",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "hp": 40,
+    "attack": 80,
+    "defense": 100,
+    "speed": 20,
+    "special": 30
+  },
+  "170": {
+    "name": "PORYGON",
+    "type1": "NORMAL",
+    "type2": null,
+    "hp": 65,
+    "attack": 60,
+    "defense": 70,
+    "speed": 40,
+    "special": 75
+  },
+  "171": {
+    "name": "AERODACTYL",
+    "type1": "ROCK",
+    "type2": "FLYING",
+    "hp": 80,
+    "attack": 105,
+    "defense": 65,
+    "speed": 130,
+    "special": 60
+  },
+  "173": {
+    "name": "MAGNEMITE",
+    "type1": "ELECTRIC",
+    "type2": null,
+    "hp": 25,
+    "attack": 35,
+    "defense": 70,
+    "speed": 45,
+    "special": 95
+  },
+  "176": {
+    "name": "CHARMANDER",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 39,
+    "attack": 52,
+    "defense": 43,
+    "speed": 65,
+    "special": 50
+  },
+  "177": {
+    "name": "SQUIRTLE",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 44,
+    "attack": 48,
+    "defense": 65,
+    "speed": 43,
+    "special": 50
+  },
+  "178": {
+    "name": "CHARMELEON",
+    "type1": "FIRE",
+    "type2": null,
+    "hp": 58,
+    "attack": 64,
+    "defense": 58,
+    "speed": 80,
+    "special": 65
+  },
+  "179": {
+    "name": "WARTORTLE",
+    "type1": "WATER",
+    "type2": null,
+    "hp": 59,
+    "attack": 63,
+    "defense": 80,
+    "speed": 58,
+    "special": 65
+  },
+  "180": {
+    "name": "CHARIZARD",
+    "type1": "FIRE",
+    "type2": "FLYING",
+    "hp": 78,
+    "attack": 84,
+    "defense": 78,
+    "speed": 100,
+    "special": 85
+  },
+  "185": {
+    "name": "ODDISH",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 45,
+    "attack": 50,
+    "defense": 55,
+    "speed": 30,
+    "special": 75
+  },
+  "186": {
+    "name": "GLOOM",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 60,
+    "attack": 65,
+    "defense": 70,
+    "speed": 40,
+    "special": 85
+  },
+  "187": {
+    "name": "VILEPLUME",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 75,
+    "attack": 80,
+    "defense": 85,
+    "speed": 50,
+    "special": 100
+  },
+  "188": {
+    "name": "BELLSPROUT",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 50,
+    "attack": 75,
+    "defense": 35,
+    "speed": 40,
+    "special": 70
+  },
+  "189": {
+    "name": "WEEPINBELL",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 65,
+    "attack": 90,
+    "defense": 50,
+    "speed": 55,
+    "special": 85
+  },
+  "190": {
+    "name": "VICTREEBEL",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "hp": 80,
+    "attack": 105,
+    "defense": 65,
+    "speed": 70,
+    "special": 100
+  }
+}

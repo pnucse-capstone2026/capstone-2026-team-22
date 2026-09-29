@@ -1,0 +1,214 @@
+wandb:
+  entity: TestRedRl
+  project: Red_Exploration
+  group: ~
+  # 로컬 run 메타는 패키지 루트 아래 wandb/ 에 저장 (train.py dir=_PROJECT_ROOT).
+
+env:
+  gb_path: red.gb
+  headless:  True
+  video_dir: video
+  state_dir: pokemonred_puffer/state_files
+  # 학습 시작 .state 는 여기만 지정. sample_init_states: true면 init_states에서
+  # 에피소드마다 샘플. false(evaluate 포함)면 init_state 하나만 사용.
+  init_state: "상록숲"
+  init_states:
+    - "0. 올클버전 태초마을"
+    - "1번도로"
+    - "2번도로"
+    # - "2번도로 북쪽"
+    - "상록숲"
+    # - "금빛마을 우측도로"
+    - "상록시티"
+    - "상록시티(도감받기 전)"
+    - "회색시티"
+    # - "4번도로"
+    - "달맞이산"
+    # - "노랑시티"
+    # - "블루시티"
+    # - "무지개시티"
+  sample_init_states: true
+  action_freq: 24
+  # Episode truncates at this many steps; vecenv / debug CLI then call reset().
+  max_steps: 1000
+  save_video: False
+  fast_video: False
+  n_record: 10
+  disable_ai_actions: False
+  # Emit episode stats this often. Must be << steps-per-env in a short sweep
+  # (e.g. 200k steps / 288 envs ≈ 700), or exploration/* never reaches WandB.
+  log_frequency: 150
+
+  # --- Screen observation ---
+  reduce_res: True
+  two_bit: True
+  # Policy also receives a player-centered 20x18 tile tracking mask of earned
+  # observation knowledge (seen / blocked / water / warp) and Map.py entities.
+
+  # --- Optional lifetime float explore_map (player footprint; not policy obs) ---
+  exploration_inc: 1.0
+  exploration_max: 1.0
+  # Map video (save_video) uses LocalMap raster; independent of this flag.
+  use_global_explore_map: False
+
+  # --- Battle skip only ---
+  disable_wild_encounters: True
+  # Skip map trainer battles: no fight, treat as win.
+  auto_win_trainer_battles: True
+
+train:
+  seed: 1
+  torch_deterministic: True
+  compile_mode: "reduce-overhead"
+  float32_matmul_precision: "high"
+  total_timesteps: 500_000_000
+  minibatch_size: 2048
+  anneal_lr: False
+  update_epochs: 3
+  norm_adv: True
+  ent_coef: 0.02
+  gae_lambda: 0.95
+  gamma: 0.998
+  clip_coef: 0.06
+  clip_vloss: True
+  learning_rate: 0.00009
+  max_grad_norm: 0.5
+  target_kl: 0.02
+  vf_clip_coef: 0.1
+  vf_coef: 0.5319333384064214
+  bptt_horizon: 64
+
+  verbose: True
+  # Relative paths resolve under this project root (cwd 무관).
+  data_dir: runs
+  # train --resume (default) loads latest run under data_dir.
+  save_checkpoint: True
+  checkpoint_interval: 50
+
+  save_overlay: True
+  # How often (in PPO epochs) to upload Media/aggregate_exploration_map/{init_state}.
+  overlay_interval: 3
+  cpu_offload: False
+  # CUDA synchronization is only for precise profiler timings; it stalls rollout otherwise.
+  profile_cuda_sync: False
+  use_rnn: True
+
+  archive_states: False
+
+  # `train --profile <name>`로 선택하는 실행 환경별 override.
+  # GPU는 policy 추론/PPO 학습만 가속하며 PyBoy 환경은 CPU/RAM을 사용한다.
+  profiles:
+    local:
+      device: cpu
+      compile: False
+      batch_size: 16384
+      num_envs: 1
+      num_workers: 1
+      env_batch_size: 1
+      env_pool: False
+      zero_copy: False
+      save_overlay: True
+    gpu:
+      device: cuda
+      compile: False
+      # 32 physical cores. env_batch_size == num_envs/num_workers so each
+      # recv waits on 1 worker. batch_size == 128 envs * 64 BPTT * 4.
+      batch_size: 32768
+      num_envs: 128
+      num_workers: 32
+      env_batch_size: 4
+      env_pool: True
+      zero_copy: False
+      save_overlay: True
+
+
+wrappers:
+  exploration:
+    - episode_stats.EpisodeStatsWrapper: {}
+
+  record:
+    - episode_stats.EpisodeStatsWrapper: {}
+    - coords_writer.CoordinatesWriter:
+        output_dir: recordings
+        write_frequency: 1000
+    - coords_writer.ActionsWriter:
+        output_dir: recordings
+        write_frequency: 1000
+
+rewards:
+  baseline.ExplorationReward:
+    # Target의 첫 방문 타일 보상.
+    target_tile_reward: 0.01
+    # Internal 첫 방문·새 관측 타일 = 각 기본값 * 이 배율.
+    internal_tile_scale: 1.5
+    # 현재 위치가 Target/Internal일 때 지급하는 새 관측 타일 보상과 step당 상한.
+    observed_tile_reward: 0.002
+    max_observation_reward_per_step: 0.04
+    # Target→Internal 최초 진입. Route gate는 0.
+    # 2-step 체류로 후보가 된 뒤, 이번 체류에서 고유 타일을 이 수 이상 밟아야 지급.
+    internal_entry_reward: 0.4
+    # Internal→Internal (건물 복층 등). 같은 min_tiles 조건.
+    internal_floor_entry_reward: 0.15
+    internal_entry_min_tiles: 5
+    # Target→External 또는 Target→Internal→External 최초 진입.
+    external_entry_reward: 0.6
+    # External→Target 최초 복귀 경로.
+    external_return_reward: 1.0
+    # 동일 External 노드에 오래 머물 때 적용하는 체류 패널티.
+    external_step_grace: 5
+    external_step_penalty: 0.002
+    # 구조물 벽(WALL/WATER/LEDGE)·NPC에 같은 칸으로 연속 두 번째부터 박을 때 패널티.
+    # 대화(wJoyIgnore)·오브젝트 soft block은 제외.
+    blocked_penalty: 0.025
+    # 새 관측·방문·맵 전환 없이 이 횟수만큼 지나면 적용.
+    no_progress_grace_steps: 15
+    no_progress_penalty: 0.004
+
+policies:
+  multi_convolutional.MultiConvolutionalPolicy:
+    policy:
+      hidden_size: 512
+    rnn:
+      name: MultiConvolutionalRNN
+      args:
+        input_size: 512
+        hidden_size: 512
+        num_layers: 1
+
+debug:
+  env:
+    gb_path: red.gb
+    headless: False
+    init_state: ~
+    init_states: []
+    sample_init_states: false
+    state_dir: pokemonred_puffer/state_files
+    max_steps: 19000
+    log_frequency: 1
+    disable_ai_actions: False
+    reduce_res: True
+    two_bit: False
+    save_video: False
+    fast_video: False
+    disable_wild_encounters: True
+    auto_win_trainer_battles: True
+  train:
+    device: cpu
+    compile: False
+    compile_mode: default
+    num_envs: 1
+    num_workers: 1
+    env_batch_size: 128
+    zero_copy: False
+    batch_size: 256
+    minibatch_size: 128
+    bptt_horizon: 2
+    total_timesteps: 256000
+    save_checkpoint: True
+    checkpoint_interval: 4
+    save_overlay: False
+    overlay_interval: 1
+    verbose: True
+    env_pool: False
+    archive_states: False
+    use_rnn: True

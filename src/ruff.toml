@@ -1,0 +1,18 @@
+# 실행: python -m ruff check .
+target-version = "py311"
+
+# 고치지 않는 코드는 검사도 하지 않는다.
+extend-exclude = [
+    "third_party",                                   # pokered 디스어셈블 원본
+    "Skills/Battle",                                 # 다른 사람 소유 — 읽기만
+    "Skills/Exploration/pokemonred_puffer-main",     # 외부 학습 저장소 사본
+    "Skills/Exploration2/pokemonred_puffer-main",
+    "Train/battle/vendor",                           # sync_vendor.py 가 만드는 복사본
+    "Train/explore/vendor",
+]
+
+[lint]
+# 버그성 실수만 잡는다 (pyflakes + 구문 오류·잘못된 비교 등). 이 버전(0.16)의 기본
+# 규칙은 import 정렬·typing 현대화까지 포함해 기존 코드에서 1,500건이 나온다 —
+# 이 저장소의 스타일(typing.Dict 등)을 바꾸자는 것이 아니므로 명시적으로 좁힌다.
+select = ["E4", "E7", "E9", "F"]
